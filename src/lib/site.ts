@@ -1,24 +1,33 @@
-// Centralized marketing content and external links.
-export const FACEBOOK_URL = "https://www.facebook.com/beyond.ink";
+﻿// Centralized marketing content and external links.
+import hero from "@/public/hero.jpg";
+import gardenArrival from "@/public/AHRPTWkvwGwF_tgVE4Oewa8Esn-z1lfgp4QPKjE7MvL0QhHpTTlnqQjWB08CFmAJkXFnpF9La3cpy2wTOuoORXu6HFcuQpTDuNFRrMcbzeyEWaHYiLzuhKX4_jzT89tZ71qpvTIsyNb0w3024-h4032-k-no.jpg";
+import gardenDetail from "@/public/AHRPTWlj6L_jcdjaXKOmIA41CWnzfYgXSpc-t6sRq7gqe5WF107MKpKBuR-joJjWVy5d4cd-W_J9ZdiIIO7KsZsl15W6ZKINN1uEM45xYghQQBcF3dnKnMNeVeIx0F8_v0Jte_OrL-phw1296-h1728-k-no.jpg";
+import resortView from "@/public/AHRPTWmWCXB6qHIn87CnlCmZ6QBo8svKCiStO1Hk9mbA-t0UZls7gdQ3itCSVrLKd9aC80OvFpN0VKKhz8jNM1E9yOGKhi5YwgdtqdMD5LOJBJwE55bmpIP4aBeJjKLro63jw081doy2Nww1728-h1296-k-no.jpg";
+import retreatOne from "@/public/481147484_1164221358732079_7498504476839542649_n.jpg";
+import retreatTwo from "@/public/481475222_1165254425295439_8548781345914421888_n.jpg";
+import retreatThree from "@/public/488265115_1192070539280494_6775959288305692201_n.jpg";
+
+export const MAPS_URL = "https://www.google.com/maps/place/Villa+Scarlet+Garden+Resort/@13.94959,120.6992248,17z/data=!3m1!4b1!4m6!3m5!1s0x33bdbdb1f4c7390f:0x6f93c14e99da1f1d!8m2!3d13.94959!4d120.6992248!16s%2Fg%2F11h3gh1_1f!18m1!1e1?entry=ttu";
+export const FACEBOOK_URL = MAPS_URL;
 
 export const images = {
-  hero: "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=2200&q=88",
-  story: "https://images.unsplash.com/photo-1602002418082-a4443e081dd1?auto=format&fit=crop&w=1200&q=85",
-  suite: "https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1100&q=85",
-  villa: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85",
-  dining: "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=85",
-  events: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=85",
-  pool: "https://images.unsplash.com/photo-1582610116397-edb318620f90?auto=format&fit=crop&w=1100&q=85",
-  spa: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1100&q=85",
+  hero,
+  story: gardenArrival,
+  suite: retreatOne,
+  villa: retreatTwo,
+  dining: resortView,
+  events: retreatThree,
+  pool: gardenDetail,
+  spa: resortView,
 } as const;
 
 export const stays = [
-  { name: "Ocean Suites", detail: "For two · King bed · Private terrace", image: images.suite },
-  { name: "Garden Villas", detail: "For four · Two bedrooms · Plunge pool", image: images.villa },
+  { name: "Garden Retreat", detail: "A relaxed setting for family days and group getaways", image: images.suite },
+  { name: "Resort Grounds", detail: "Space to gather, celebrate, and make memories together", image: images.villa },
 ] as const;
 
 export const reviews = [
-  ["Every detail felt considered—from the quiet mornings to the beautifully prepared dinners.", "Mara & Joel, Manila"],
-  ["The kind of place that makes you slow down. We left rested, sun-kissed, and already planning a return.", "Anika C., Singapore"],
-  ["Our family celebration here was effortless and genuinely memorable.", "The Ramos family"],
+  ["A welcoming spot for a laid-back day with family and friends.", "Villa Scarlet Garden Resort guest"],
+  ["The garden setting makes every gathering feel a little more special.", "Villa Scarlet Garden Resort guest"],
+  ["A simple escape in Balayan for making time together count.", "Villa Scarlet Garden Resort guest"],
 ] as const;

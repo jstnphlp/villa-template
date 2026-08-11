@@ -1,4 +1,4 @@
-// Root document shell for the App Router.
+﻿// Root document shell for the App Router.
 import type { Metadata } from "next";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
@@ -7,8 +7,16 @@ const display = Cormorant_Garamond({ subsets: ["latin"], variable: "--font-displ
 const sans = DM_Sans({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "Azure Cove Villas | A private coastal escape",
-  description: "A refined, original villa-resort landing page template.",
+  title: "Villa Scarlet Garden Resort | Balayan, Batangas",
+  description: "Villa Scarlet Garden Resort is a garden resort in Balibago, Balayan, Batangas, Philippines.",
+  keywords: ["Villa Scarlet Garden Resort", "Balayan resort", "Batangas resort", "Balibago"],
+  icons: { icon: "/icon.svg" },
+  openGraph: {
+    title: "Villa Scarlet Garden Resort | Balayan, Batangas",
+    description: "A garden resort in Balibago, Balayan, Batangas, Philippines.",
+    locale: "en_PH",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
