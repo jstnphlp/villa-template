@@ -1,4 +1,4 @@
-﻿// Villa Scarlet Garden Resort's single-page marketing route.
+// Villa Scarlet Garden Resort's single-page marketing route.
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import BookingForm from "@/components/booking-form";
@@ -16,10 +16,9 @@ export default function Home() {
         <Image src={images.hero} alt="A garden-resort escape in Batangas" fill priority sizes="100vw" className="hero-image" />
         <div className="hero-shade" />
         <Navigation />
+        <p className="hero-location">Balibago, Balayan, Batangas</p>
         <div className="hero-copy wrap">
-          <p className="eyebrow light">Balibago, Balayan, Batangas</p>
           <h1>Make room for<br />good times together.</h1>
-          <p className="hero-intro">Villa Scarlet Garden Resort is a relaxed garden escape for family days, group getaways, and celebrations in Balayan.</p>
           <a className="text-link light" href="#story">Discover the resort <Arrow /></a>
         </div>
         <BookingForm />
