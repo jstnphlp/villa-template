@@ -1,10 +1,13 @@
-// Azure Cove's single-page marketing route.
+﻿// Azure Cove's single-page marketing route.
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 import BookingForm from "@/components/booking-form";
 import Navigation from "@/components/navigation";
 import { FACEBOOK_URL, images, reviews, stays } from "@/lib/site";
 
-function Arrow() { return <span aria-hidden="true">↗</span>; }
+function Arrow() {
+  return <ArrowUpRight aria-hidden="true" size={18} strokeWidth={1.75} />;
+}
 
 export default function Home() {
   return (
@@ -14,7 +17,7 @@ export default function Home() {
         <div className="hero-shade" />
         <Navigation />
         <div className="hero-copy wrap">
-          <p className="eyebrow light">Lian, Batangas · Philippines</p>
+          <p className="eyebrow light">Lian, Batangas Â· Philippines</p>
           <h1>Where the sea<br />sets the pace.</h1>
           <p className="hero-intro">A private coastal hideaway for long lunches, saltwater swims, and the simple luxury of unhurried days.</p>
           <a className="text-link light" href="#story">Discover the cove <Arrow /></a>
@@ -27,7 +30,7 @@ export default function Home() {
         <div className="story-copy">
           <p className="eyebrow">Welcome to Azure Cove</p>
           <h2>Find your own rhythm by the shore.</h2>
-          <p>Set between gentle hills and the open sea, Azure Cove is a small collection of villas made for quiet escapes. Here, nature is not a view—it is the atmosphere of every stay.</p>
+          <p>Set between gentle hills and the open sea, Azure Cove is a small collection of villas made for quiet escapes. Here, nature is not a viewâ€”it is the atmosphere of every stay.</p>
           <a className="text-link" href="#stays">Explore our stays <Arrow /></a>
         </div>
       </section>
@@ -43,12 +46,12 @@ export default function Home() {
 
       <section className="split-feature reverse" id="dining"><div className="feature-image"><Image src={images.dining} alt="A tropical pool beside the coast" fill sizes="(max-width: 800px) 100vw, 50vw" /></div><div className="feature-copy"><p className="eyebrow">From our kitchen</p><h2>Sea, soil, and something to savor.</h2><p>Fresh coastal ingredients, generous tables, and a menu that follows the day from coffee at sunrise to cocktails at golden hour.</p><a className="button button-dark" href="#contact">Discover dining <Arrow /></a></div></section>
 
-      <section className="reviews" id="reviews"><div className="wrap"><p className="eyebrow centered">Guest notes</p><h2 className="centered">Words from the cove.</h2><div className="review-grid">{reviews.map(([quote, name]) => <blockquote key={name}><span className="quote-mark">“</span><p>{quote}</p><footer>{name}</footer></blockquote>)}</div></div></section>
+      <section className="reviews" id="reviews"><div className="wrap"><p className="eyebrow centered">Guest notes</p><h2 className="centered">Words from the cove.</h2><div className="review-grid">{reviews.map(([quote, name]) => <blockquote key={name}><span className="quote-mark">â€œ</span><p>{quote}</p><footer>{name}</footer></blockquote>)}</div></div></section>
 
       <section className="amenities" id="amenities"><div className="wrap section-heading"><div><p className="eyebrow">The good life</p><h2>Little luxuries, naturally.</h2></div><a className="text-link" href="#contact">See all amenities <Arrow /></a></div><div className="amenity-grid wrap"><article><div className="amenity-image"><Image src={images.pool} alt="Infinity pool looking onto greenery" fill sizes="(max-width: 800px) 100vw, 33vw" /></div><h3>Infinity pool</h3></article><article><div className="amenity-image"><Image src={images.spa} alt="Relaxing spa treatment" fill sizes="(max-width: 800px) 100vw, 33vw" /></div><h3>In-villa wellness</h3></article><article className="amenity-text"><p className="eyebrow">Slow days, your way</p><h3>Kayaks, bonfires, island picnics, and hidden corners to do nothing at all.</h3><a className="text-link" href="#contact">Make an enquiry <Arrow /></a></article></div></section>
 
       <section className="contact" id="contact"><div className="wrap contact-grid"><div><p className="eyebrow light">Find us</p><h2>Your next escape<br />is closer than you think.</h2></div><div className="contact-details"><p>San Diego, Lian<br />Batangas, Philippines</p><p><a href="tel:+639001234567">+63 900 123 4567</a><br /><a href="mailto:stay@azurecovevillas.com">stay@azurecovevillas.com</a></p><a className="button button-gold" href={FACEBOOK_URL} target="_blank" rel="noreferrer">Message us <Arrow /></a></div></div></section>
-      <footer className="site-footer wrap"><a className="wordmark dark" href="#top">Azure <i>Cove</i></a><p>© {new Date().getFullYear()} Azure Cove Villas.</p><div><a href="#top">Instagram</a><a href="#top">Privacy</a></div></footer>
+      <footer className="site-footer wrap"><a className="wordmark dark" href="#top">Azure <i>Cove</i></a><p>Â© {new Date().getFullYear()} Azure Cove Villas.</p><div><a href="#top">Instagram</a><a href="#top">Privacy</a></div></footer>
     </main>
   );
 }
